@@ -1,7 +1,7 @@
 <template>
     <div class="machine-border">
         <h1>Machine : {{machine.name}}</h1>
-        <h2 v-bind:class="machine.statusColor">{{getStatus()}}</h2>
+        <h2 v-bind:class="changeColor()">{{getStatus()}}</h2>
         <h5>Last time checked : {{machine.checkedAt.toLocaleString('en-GB', {timeZone: 'UTC'})}}</h5>
     </div>
 </template>
@@ -19,6 +19,12 @@
                 }
                 this.machine.statusColor = 'red';
                 return 'Status KO'
+            },
+            changeColor: function() {
+              if (this.machine.status) {
+                return 'green'
+              }
+              return 'red'
             }
         }
     }

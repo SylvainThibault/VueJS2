@@ -22,13 +22,11 @@
                     name: 'What else ?',
                     status: true,
                     checkedAt: new Date(),
-                    statusColor: 'red'
                 }, {
                     id: 2,
                     name: 'Broken',
                     status: false,
                     checkedAt: new Date(),
-                    statusColor: 'red'
                 }]
             }
         }
